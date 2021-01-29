@@ -3,6 +3,33 @@
 <head>
   <title>Learning layout CSS</title>
   <style>
+       @media only screen and (max-width: 768px) {
+        /*Smaller screen code here */
+            .container {
+                width: 100%;
+            }
+            header {
+                text-align: center;
+            }
+            .side {
+                float: none;
+                width: 100%;
+                text-align: center;
+            }
+            .side > ul > li {
+                display: inline-block;
+            }
+            .side > ul > li > a {
+                border-bottom: 0;
+                padding: 10px; 
+            } 
+            .main {
+                margin-left: 0;
+            }
+            .main > p {
+                text-align: justify;
+            }
+        }
       html,body{
           padding: 0px;
           margin: 0px;
