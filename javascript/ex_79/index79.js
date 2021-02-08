@@ -1,7 +1,7 @@
 
 let num = 0;
 let sum = 0;
-while(num <= 1000){
+do{
     if(num % 2 == 0){
         console.log(num);
         sum += num; 
@@ -9,4 +9,4 @@ while(num <= 1000){
     }
    num++;
     
-}
+} while(num <= 1000)
