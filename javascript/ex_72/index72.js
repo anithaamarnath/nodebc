@@ -1,6 +1,7 @@
 let num = 1;
-let star ='*';
+let star ='';
 while(num <= 10){
+        
         star += '*';
         console.log(star);
         num++
