@@ -1,13 +1,22 @@
-let students = [ 'anitha', 'abi', 'abirami', 'dev', 'srilakshmi', 'durga' ];
-students[2]= students[2].toUpperCase();
-students[5]= students[5].toUpperCase();
+let ingredients = ['Pork',
+    'Pomato',
+    'Chicken',
+    'Lettuce',
+    'Beef',
+    'Carrots',
+    'Cucumber' ]
+let vegetarian = [];
+
+vegetarian[0] = ingredients[1];
+vegetarian[1] = ingredients[3];
+vegetarian[2] = ingredients[5];
+vegetarian[3] = ingredients[6];
 
 
-console.log("Length of the students Array",students.length);
-console.log("Student Array", students)
-
-//Output
 
 
-//Length of the students Array 6
-//Student Array [ 'anitha', 'abi', 'ABIRAMI', 'dev', 'srilakshmi', 'DURGA' ]
+console.log("Show the vegetarian  list",vegetarian);
+console.log("Show the ingredients list",ingredients);
+
+
+

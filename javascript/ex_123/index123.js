@@ -1,23 +1,13 @@
-const animals = ['dog', 'duck', 'cow'];
-const dog = animals.shift();
+let students = [ 'anitha', 'abi', 'abirami', 'dev', 'srilakshmi', 'durga' ];
+students[2]= students[2].toUpperCase();
+students[5]= students[5].toUpperCase();
 
-console.log(animals);
-// ['duck', 'cow']
 
-console.log(animals.length); // 2
+console.log("Length of the students Array",students.length);
+console.log("Student Array", students)
 
-const duck = animals.shift();
+//Output
 
-console.log(animals);
-// ['cow']
 
-console.log(animals.length);
-// 1
-
-const cow = animals.shift();
-
-console.log(animals);
-// []
-
-console.log(animals.length);
-// 0
+//Length of the students Array 6
+//Student Array [ 'anitha', 'abi', 'ABIRAMI', 'dev', 'srilakshmi', 'DURGA' ]
