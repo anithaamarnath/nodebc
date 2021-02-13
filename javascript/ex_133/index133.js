@@ -16,15 +16,15 @@ for(let i = 0; i < mutants.length; i++){
     }
 
 }
+const newArray = mutants.filter(function(mutant){
+    return mutant !== 'Magneto'
+})
 
-// for(let i = 0; i < mutants.length; i++){
-//     if(mutants[i] === 'Magneto'){
-//         mutants = mutants[i].pop();
-//     } else {
-//         console.log("Mutants", mutants[i]);
-//     }
+console.log("Removed Magneto",newArray)
 
-// }
+newArray.forEach(function(mutant){
+console.log('Without Magneto', mutant.toUpperCase());
+});
 
 
 
