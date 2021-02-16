@@ -1,5 +1,8 @@
 const games = [];
-let result = 'PS4'
+const result = 'PS4'
+let budget = 0;
+let gamesName = [];
+let gamesPrices = [];
 games.push({
     'name': 'Crash Bandicoot N. Sane Trilogy',
     'price': 1060,
@@ -123,14 +126,39 @@ showDetail: function(){
 
 
 
+//   games.map(function(game){
+
+//     if(game.console === result){
+//         budget += game.price
+//     }
+//     return budget;
+   
+    
+//  });
+
+//  console.log(`I need ${budget} CAD to get all this PS4 great games!!`)
 
 
- let result1 = games.filter(function(game){
-     return game.console === result;
+
+ games.map(function(game){
+    console.log(game);
+     gamesName.push(game.name);
+     return gamesName;
+   
+    
  });
 
-  console.log(result1);
+ console.log('Games Name',gamesName);
 
+
+ games.map(function(game){
+    console.log(game);
+    gamesPrices.push(game.price);
+     return gamesPrices;
+   
+    
+ });
+ console.log('Games Price', gamesPrices);
 
 
 
