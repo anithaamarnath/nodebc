@@ -13,15 +13,22 @@
         <link rel="stylesheet" href="">
         <script >
             if(window.confirm("This program adds all the numbers you input")){
-                let repeat = prompt('how many time you need to add the number')
+                let repeat = Number(prompt('how many time you need to repeat the number'))
+                window.alert(`User need to repeat ${repeat}`)
                 let result = 0;
-            for(let i = 0 ; i < Number(repeat); i++){
+                let average =0;
+            for(let i = 0 ; i < repeat; i++){
                 
                 let numbers = Number(prompt('user input'));
-                window.alert(`your result ${result}`);
+                window.alert(`User Input Number${numbers}`)
+                
                  result +=numbers;
+                 window.alert(`your result ${result}`);
+                 
                 
             }
+            average = result / repeat;
+            window.alert(`Average number${average}`)
             
         } else {
             window.alert(`Please provide valid number`);
