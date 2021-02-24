@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 11</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script>
+            let firstName = prompt("Please enter your first name")
+            let paswword = prompt("Please enter your password");
+            window.alert(`Welcome ${firstName}`);
+            setTimeout((function(){
+                window.alert('Do you still want to be logged ?')
+                if(window.confirm()){
+                    window.alert(`${firstName} your session has been restored`)
+                } else {
+                    window.alert(`${firstName} your session has been expired`)
+                }
+               
+            }),5000)
+
+        </script>
+    </head>
+    <body>
+       
+        
+       
+    </body>
+</html>
