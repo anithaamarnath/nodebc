@@ -1,32 +1,19 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Exercise 11</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <script>
-            let userInput = prompt("Input the number of seconds ")
-           
-               const id = setInterval(() => {
-                console.log(`this much second left${userInput}`)
-            }, 1000);
-            
-          
-          clearInterval(id);
-        
+<head>
+  <meta charset="UTF-8" />
+  <title>setInterval/clearInterval example</title>
 
-        </script>
-    </head>
-    <body>
-       
-        
-       
-    </body>
+  <script>
+    let time = window.prompt('Please enter the time');
+   setInterval(() => {
+       time !=  0 ? console.log('hi', time--) : alert('your time is expired come back later ')
+   }, 1000);
+  
+  </script>
+</head>
+<body>
+
+  
+</body>
 </html>
