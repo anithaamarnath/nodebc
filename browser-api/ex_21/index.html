@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Elements</title>
+  <style>
+    .red {
+      color: red;
+    }
+    
+    .green {
+      color: green;
+    }
+    
+    .orange {
+      color: orange;
+    }
+  </style>
+  <script>
+      window.onload = function(){
+          const li =  document.querySelectorAll('li')
+          console.log(li)
+          const firstLi = li[0];
+          firstLi.setAttribute('class','orange')
+         const secondLi = firstLi.nextElementSibling
+         secondLi.setAttribute('class','orange')
+         console.log(secondLi)
+         const thirdLi = secondLi.nextElementSibling
+         thirdLi.setAttribute('class','orange')
+         console.log(thirdLi)
+         const fourthLi = thirdLi.nextElementSibling
+         fourthLi.setAttribute('class','orange')
+         console.log(fourthLi)
+         const fivthLi = fourthLi.nextElementSibling
+         fivthLi.setAttribute('class','orange')
+         console.log(fivthLi)
+         setTimeout(function(){
+           const redReplace = thirdLi.classList.replace('orange','red')
+           const greenReplace=firstLi.classList.replace('orange','green')
+           console.log(redReplace,greenReplace)
+         },3000)
+      
+    }
+  </script>
+</head>
+<body>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+</body>
+</html>
