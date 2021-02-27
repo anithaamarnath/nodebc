@@ -1,47 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Setting attributes</title>
+  <title>Elements</title>
   <style>
-    .bold {
-      font-weight: bold;
+    .red {
+      color: red;
     }
     
-    .striked {
-      text-decoration: line-through;
+    .green {
+      color: green;
+    }
+    
+    .orange {
+      color: orange;
     }
   </style>
   <script>
-      window.onload = function (){
-          const elementH1 = document.querySelector('h1')
-          const elementDiv = document.querySelector('div')
-            console.log('h1',elementH1)
-            console.log('div',elementDiv)
-            elementDiv.removeAttribute('name')
-          console.log("removed name",elementDiv)
-            setTimeout(()=>{
-                if(elementH1.hasAttributes()){
-              elementH1.classList.add('striked')
-              
-          } else {
-            elementH1.classList.add('bold')
-          }
-          if(elementDiv.hasAttributes()){
-              elementDiv.classList.add('striked')
-              
-          } else {
-            elementDiv.classList.add('bold')
-          }
-            }, 1000)
-           
-          
-          
+      window.onload = function(){
+          const ul = document.querySelector('ul')
+          console.log("Output",ul)
+          const children = ul.children
+           const liSecond = children[1];
+           liSecond.setAttribute('class', 'green');
+           const liFourth = children[3];
+           liFourth.setAttribute('class', 'red');
+           const parent = children[4].parentElement
+           parent.setAttribute('class','orange');
+           console.log('Parent Element',parent)
+
 
       }
   </script>
 </head>
 <body>
-  <h1 id="main">Playing with attributes</h1>
-  <div name="divy">We have more control over our documents as we learn about JavaScript and DOM elements!!!</div>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
 </body>
 </html>
