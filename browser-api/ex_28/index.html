@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>
+        window.onload = function(){
+            const body = document.createElement('body');
+            const ol = document.createElement('ol');
+            
+            let button = document.createElement('button');
+            button.innerText = 'Add Name'
+            let name = []; name = prompt('user name');
+            function userInput(name){
+                
+                if(name != null){
+                    let li = document.createElement('li');
+                    li.innerText = name;
+                    if(name.length % 2  === 0){
+                    li.style.color = '#ddd';
+                } else {
+                    li.style.color = '#eee';
+                }
+                ol.appendChild(li)
+                }
+            }
+            document.body.appendChild(ol)
+            document.body.appendChild(button)
+           
+            button.onclick = function(){
+                name = prompt('Enter usernmae')
+                userInput(name)
+            }
+          
+        
+
+
+        }
+         
+       
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
