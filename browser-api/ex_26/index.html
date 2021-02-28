@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>
+        window.onload = function(){
+            let body = document.querySelector('body')
+            const name = ['anitha','amarnath','dev','sri','lakshmi','devi','janani','priya','Srilakshmi','Abinaya','Abirami','Durga']
+            let ul = document.createElement('ul');
+            
+            name.forEach(element => {
+                let li = document.createElement('li');
+                li.innerText = element;
+                ul.appendChild(li)
+                
+               
+            } );
+           
+                body.appendChild(ul)
+           
+            
+        }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
