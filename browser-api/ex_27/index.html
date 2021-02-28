@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>
+        window.onload = function (){
+            let body = document.querySelector('body');
+            let ul = document.createElement('ul');
+          const array = [];
+          let num = null;
+          for(num = 1; num<=100; num++){
+            array.push(num);
+          }
+          array.forEach(element => {
+                let li = document.createElement('li');
+                li.innerText = element;
+                if(element %2  === 0){
+                    li.style.color = '#ddd';
+                } else {
+                    li.style.color = '#eee';
+                }
+                ul.appendChild(li)
+                
+               
+            } );
+           
+                body.appendChild(ul)
+           
+
+       
+        }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
