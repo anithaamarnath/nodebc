@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Products</title>
+    <script>
+        window.onload = function (){
+
+            let ul = document.querySelector('ul')
+            let li = ul.children.length
+            console.log(ul.children.length);
+            for(let i = li -1 ; i >= 0; i-- ){
+                let list = ul.children[i];
+                
+                console.log(ul.removeChild(list))
+
+            }     
+
+        }
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li>Bannana</li>
+      <li>Apple</li>
+      <li>Peach</li>
+      <li>Eggs</li>
+      <li>Tomatto</li>
+      <li>Lettuce</li>
+      <li>Milk</li>
+    </ul>
+  </body>
+</html>
