@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Events</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script>
+            window.onload = function(){
+              let body = document.querySelector('body');
+              let div = document.querySelector('div')
+
+            body.addEventListener('keypress', function(event){
+                    const keyCode = event.charCode;
+                    const key = String.fromCharCode(keyCode)
+                    div.innerText = `You pressed the ${key} key with the ${keyCode} code`
+                    div.style.fontSize = '20px';
+                    div.style.color = 'red';
+                    div.style.fontFamily = 'Arial';
+                    div.style.bottomPadding = '20px'
+                })
+            
+            }
+        </script>
+    </head>
+    <body>
+        <div></div>
+        <button id="firstButton">Click Me!!</button>
+        <button id="secondButton">Remove event listener</button>
+        <a href="https://google.com">Link with JavaScript handler</a>
+      </body>
+</html>
