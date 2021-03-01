@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+        window.onload = function(){
+            const link = document.querySelector('a');
+            let count = 0
+            const preventEvent = function(event){
+                event.preventDefault();
+                console.log('This link doesn\'t send us to a differen page as we\'re preventing the default behaviour')
+            }
+            link.onmouseover = () =>{
+                if(count === 0){
+                    link.style.backgroundColor = 'red';
+                }
+                if(count === 1){
+                    link.style.backgroundColor = 'blue';
+                }
+                if(count === 2){
+                    link.style.backgroundColor = 'green';
+                }
+                if(count === 3){
+                    link.style.backgroundColor = 'white';
+                }
+                
+                count++
+                // switch(++count){
+                //     case 1:
+                //     link.style.backgroundColor = 'red';
+                //     break
+                //     case 2:
+                //     link.style.backgroundColor = 'blue';
+                //     break
+                //     case 3:
+                //     link.style.backgroundColor = 'green';
+                //     break
+                //     case 4:
+                //     link.style.backgroundColor = 'white';
+                //     break
+                //     default:
+                //     link.style.backgroundColor = 'black';
+                //     break
+
+                // }
+                link.addEventListener('click',preventEvent)   
+
+                link.onmouseout = () => {
+                    console.log(`The link background color is: ${link.style.backgroundColor}`)
+                }
+               
+                
+            }
+            
+
+        }
+    </script>
+  </head>
+  <body>
+    <div></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>
