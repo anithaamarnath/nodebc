@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form Properties</title>
+  <script>
+      window.onload = function(){
+       const form = document.querySelector('form')
+       const div = document.querySelector('div')
+       const action = form.action;
+       const encoding = form.encoding;
+       const method = form.method;
+       const name = form.name;
+
+        // const userName = form[0];
+        // const password = form[1];
+        // const submit = form[2];
+        console.log(action,encoding,method,name)
+        div.innerText = `Action ${action} \n Encoding ${encoding}\n Method ${method} \n Name ${name}`
+
+    }
+  </script>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" />
+    <input type="password" id="pass" name="pass" />
+    <input type="submit" name="submit" value="Send" />
+  </form>
+  <div></div>
+</body>
+</html>
