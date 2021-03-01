@@ -9,10 +9,9 @@
             let count = 0;
             console.log(div);
             
-            firstButton.addEventListener('click', function(e){
+            firstButton.addEventListener('ondblclick', function(e){
                 count++
-                div.innerText = `${count}`;
-                console.log()
+                div.innerText = `${count++}`;
                
             } )
         }
