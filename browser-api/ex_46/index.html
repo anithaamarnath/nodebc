@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form Properties</title>
+  <script>
+      window.onload = function(){
+        const form = document.querySelector('form')
+        const select = document.querySelector('select')
+      
+      
+        form.onsubmit = (e) => {
+         const index = select.selectedIndex; 
+         const text = select.options[index].innerText;
+          e.preventDefault();
+          alert(`${text} has been selected and it has ${index} as id`)
+        }
+    }
+      </script>
+</head>
+<body>
+  <form action="save_usuario.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <select id="countries">
+      <option value="1">Argentina</option>
+      <option value="2">Brazil</option>
+      <option value="3">Canada</option>
+      <option value="4">Colombia</option>
+    </select>
+    <input type="submit" name="submit" value="Submit" />
+  </form>
+</body>
+</html>
