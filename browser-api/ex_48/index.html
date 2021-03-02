@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form elements event</title>
+  <script>
+      window.onload = function(){
+        const form = document.querySelector('form');
+        const username = form.elements[0];
+        const passWord = form.elements[1];
+        const inputbutton = form.elements[2];
+
+
+        username.onfocus = function() {
+       
+            username.style.boxShadow = '2px 2px 2px 2px '
+           
+        }
+
+        passWord.onfocus = function() {
+        // this code will get executed when we set focus on the username input
+            passWord.style.boxShadow = '2px 2px 2px 2px '
+           
+        }
+        inputbutton.onfocus = function() {
+        // this code will get executed when we set focus on the username input
+            username.style.boxShadow = '1px 1px 1px 1px'
+           
+        }
+        username.onblur = function() {
+       
+            username.style.boxShadow = 'none' 
+      
+        }
+
+        passWord.onblur = function() {
+        // this code will get executed when we set focus on the username input
+            passWord.style.boxShadow =  'none' 
+            
+        }
+        inputbutton.onblur = function() {
+        // this code will get executed when we set focus on the username input
+        inputbutton.style.boxShadow = '1px 1px 1px 1px'
+            
+        }
+        form.onsubmit = (e) => {
+            e.preventDefault();
+        }
+       
+
+      }
+      
+      
+  </script>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" />
+    <input type="password" id="pass" name="pass" />
+    <input type="submit" name="submit" value="Send" />
+  </form>
+</body>
+</html>
