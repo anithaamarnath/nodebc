@@ -6,9 +6,30 @@
   <script>
       window.onload = function (){
           const form = document.querySelector('form')
-          const checkboxes = document.querySelector('checkbox');
-          console.log(form.checkboxes)
           
+          
+         
+          form.onsubmit = (e) => {
+            e.preventDefault()
+            const selectedElement = document.querySelectorAll('input:checked');
+            
+           
+            if(selectedElement.length === 0){
+              alert('Please at least select a superheroe')
+            } else if(selectedElement.length=== 1){
+              alert(`The best superheroe is: ${selectedElement[0].value}`)
+            } else if(selectedElement.length > 1){
+              let heros = ""
+              for(let i = 0; i < selectedElement.length; i++ ){
+                  heros +=  `${selectedElement[i].value},`
+                 
+              }
+              console.log(heros)
+              
+            }
+
+            
+          }
           
           
 
