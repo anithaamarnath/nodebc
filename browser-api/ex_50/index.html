@@ -20,34 +20,55 @@
   <script>
       window.onload = function(){
           const form = document.querySelector('form');
-          
+           
           const button = form.elements[2];
+          const validateUser = function(username) {
+            const regex = /^[a-z0-9]+$/i;
+            return regex.test(username);
+          }
+          const validateEmail = function(email) {
+            const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return regex.test(email);
+          }
+
           
           form.onsubmit = function(e){
             e.preventDefault();
             const username = form.elements[0];
             const password = form.elements[1];
-              if(username.value.length === 0 || password.value.length === 0){
+            const email = form.elements[2]
+            
+  
+              if(username.value.length === 0 || password.value.length === 0) {
                   console.log('please provide input and password')
                   const div = document.querySelector('div');
                   div.classList.add('error')
                   div.innerText = `please provide input and password`
                   return false
-              }
-              const div = document.querySelector('div');
-                  div.classList.add('submit')
-                  div.innerText = `your form is successfuly submitted`
-              return true;
+              } 
+              
+
+              if(!validateUser(username.value)) {
+                console.log(`Incorrect username'`)
+              return false
+                }
+                if(!validateEmail(email.value)) {
+                console.log(`Incorrect email'`)
+                return false
+              
+                }
 
           }
-      }
+        }
+      
   </script>
 </head>
 <body>
   <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
-    <input type="text" id="username" name="username" />
-    <input type="password" id="pass" name="pass" />
-    <input type="submit" name="submit" value="Send" />
+    <input type="text" id="username" name="username" placeholder="username" />
+    <input type="password" id="pass" name="pass" placeholder="pass" />
+    <input type="text" id="email" name="email" placeholder="email" />
+    <input type="submit" name="submit" value="Send" placeholder="submit" />
   </form>
   <div id="errors"></div>
 </body>
